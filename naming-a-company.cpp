@@ -2,10 +2,8 @@ class Solution {
 public:
     long long distinctNames(vector<string>& ideas) {
         unordered_map<string,int> mp;
-        int c1[26]={0};
         for(int i=0;i<ideas.size();i++){
             mp[ideas[i]]=1;
-            c1[ideas[i][0]-'a']++;
         }
         int count[26][26]={0};
         int long long ret = 0;
